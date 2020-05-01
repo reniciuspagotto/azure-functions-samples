@@ -22,8 +22,7 @@ namespace AzureFuntionBlobTrigger
             using (Image<Rgba32> input = Image.Load<Rgba32>(inputBlob, out format))
             {
                 input.Mutate(x => x.Resize(320, 200));
-                //input.Save(outputBlob, format);
-                input.SaveAsPng(outputBlob);
+                input.Save(outputBlob, format);
             }
         }
     }

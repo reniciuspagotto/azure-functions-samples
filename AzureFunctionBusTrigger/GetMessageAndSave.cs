@@ -15,7 +15,7 @@ namespace AzureFunctionBusTrigger
 
             var product = JsonConvert.DeserializeObject<Product>(message);
 
-            using (SqlConnection conn = new SqlConnection("Data Source=(LocalDb)\\MSSQLLocalDB;Initial Catalog=AzureBusSample;Integrated Security=true"))
+            using (SqlConnection conn = new SqlConnection("<your storage connection string>"))
             {
                 conn.Open();
 
