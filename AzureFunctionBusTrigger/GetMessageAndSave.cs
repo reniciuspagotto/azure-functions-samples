@@ -1,15 +1,15 @@
-using AzureFunctionBusTrigger.Entity;
+using AzureFunctionsBusTrigger.Entity;
 using Microsoft.Azure.WebJobs;
 using Microsoft.Extensions.Logging;
 using Newtonsoft.Json;
 using System.Data.SqlClient;
 
-namespace AzureFunctionBusTrigger
+namespace AzureFunctionsBusTrigger
 {
     public static class GetMessageAndSave
     {
         [FunctionName("GetMessageAndSave")]
-        public static void Run([ServiceBusTrigger("product", Connection = "AzureServiceBusConnection")] string message, ILogger log)
+        public static void Run([ServiceBusTrigger("az-204-test", Connection = "AzureServiceBusConnection")] string message, ILogger log)
         {
             log.LogInformation($"C# ServiceBus queue trigger function processed message: {message}");
 

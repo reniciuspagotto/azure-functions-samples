@@ -7,7 +7,7 @@ using Newtonsoft.Json;
 using System.IO;
 using System.Threading.Tasks;
 
-namespace AzureFunctionHttpTrigger
+namespace AzureFunctionsHttpTrigger
 {
     public static class GetNameByQueryString
     {

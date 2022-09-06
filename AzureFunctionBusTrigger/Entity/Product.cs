@@ -1,4 +1,4 @@
-﻿namespace AzureFunctionBusTrigger.Entity
+﻿namespace AzureFunctionsBusTrigger.Entity
 {
     public class Product
     {

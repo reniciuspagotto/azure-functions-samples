@@ -6,14 +6,14 @@ using SixLabors.ImageSharp.PixelFormats;
 using SixLabors.ImageSharp.Processing;
 using System.IO;
 
-namespace AzureFuntionBlobTrigger
+namespace AzureFuntionsBlobTrigger
 {
     public static class GetImageAndResize
     {
         [FunctionName("GetImageAndResize")]
         public static void Run(
-            [BlobTrigger("product/{name}", Connection = "AzureWebJobsStorage")] Stream inputBlob,
-            [Blob("product-thumb/{name}", FileAccess.Write)] Stream outputBlob, string name, ILogger log)
+            [BlobTrigger("product/{name}", Connection = "AzureBlobStorage")] Stream inputBlob,
+            [Blob("product-thumb2/{name}", FileAccess.Write, Connection = "AzureBlobStorage")] Stream outputBlob, string name, ILogger log)
         {
             log.LogInformation($"C# Blob trigger function Processed blob\n Name:{name} \n Size: {inputBlob.Length} Bytes");
 

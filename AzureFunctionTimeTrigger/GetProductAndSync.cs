@@ -3,7 +3,7 @@ using Microsoft.Extensions.Logging;
 using System;
 using System.Data.SqlClient;
 
-namespace AzureFunctionTimeTrigger
+namespace AzureFunctionsTimeTrigger
 {
     public static class GetProductAndSync
     {
